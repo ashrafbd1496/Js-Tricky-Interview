@@ -1,20 +1,30 @@
 
         //asyncronus javascript
 
-        function timer(n){
+        function delay(i){
+
+            return new Promise(resovle => {
+
+                setTimeout(() => {
+
+                   resovle(i);
+                
+    
+                    }, i * 1000);
+            });
+        }
+
+       async function timer(n){
 
             console.log("Start Timer");
 
             for(let i = 0; i <= n; i++){
-
-                setTimeout(() => {
-
-                console.log(i);
-            
-
-                }, i * 1000);
+                const result = await delay(i);
+                console.log(result);
             }
+            console.log("End Timer");
     }
-    let result = timer(3);
+    
+    timer(3);
 
-    console.log("End Timer");
+    
