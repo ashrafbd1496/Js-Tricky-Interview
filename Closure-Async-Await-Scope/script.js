@@ -5,7 +5,7 @@
 
             console.log("Start Timer");
 
-            for(i = 0; i <= n; i++){
+            for(let i = 0; i <= n; i++){
 
                 setTimeout(() => {
 
@@ -15,6 +15,6 @@
                 }, i * 1000);
             }
     }
-    var result = timer(3);
+    let result = timer(3);
 
     console.log("End Timer");
